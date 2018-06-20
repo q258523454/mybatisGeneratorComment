@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.dgpj_server_errorMapper">
+  <resultMap id="BaseResultMap" type="com.entity.dgpj_server_error">
+    <result column="uniqueCode" jdbcType="VARCHAR" property="uniqueCode" />
+    <result column="apid" jdbcType="VARCHAR" property="apid" />
+    <result column="stage" jdbcType="VARCHAR" property="stage" />
+    <result column="startTime" jdbcType="VARCHAR" property="startTime" />
+    <result column="endTime" jdbcType="VARCHAR" property="endTime" />
+    <result column="message" jdbcType="VARCHAR" property="message" />
+    <result column="insertTime" jdbcType="TIMESTAMP" property="insertTime" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.entity.dgpj_server_error">
+    <result column="details" jdbcType="LONGVARCHAR" property="details" />
+  </resultMap>
+  <sql id="Blob_Column_List">
+    details
+  </sql>
+</mapper>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.DgpjCallLogMapper">
+  <resultMap id="BaseResultMap" type="com.entity.DgpjCallLog">
+    <result column="uniqueCode" jdbcType="VARCHAR" property="uniqueCode" />
+    <result column="apid" jdbcType="VARCHAR" property="apid" />
+    <result column="industryType" jdbcType="VARCHAR" property="industryType" />
+    <result column="stage" jdbcType="VARCHAR" property="stage" />
+    <result column="startTime" jdbcType="VARCHAR" property="startTime" />
+    <result column="ratingStatus" jdbcType="VARCHAR" property="ratingStatus" />
+  </resultMap>
+</mapper>
