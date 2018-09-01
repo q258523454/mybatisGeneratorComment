@@ -170,7 +170,7 @@ public class MyCommentGenerator implements CommentGenerator{
         StringBuilder sb = new StringBuilder();
         // introspectedColumn.getRemarks() 获取数据库表中字段(filed)的注释
         sb.append(introspectedColumn.getRemarks());
-        field.addJavaDocLine("//"+sb.toString().replace("\n", " "));
+        field.addJavaDocLine("// "+sb.toString().replace("\n", " "));
     }
 
     public void addFieldComment(Field field, IntrospectedTable introspectedTable) {
