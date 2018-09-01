@@ -29,6 +29,7 @@
                 connectionURL="${url}"
                 userId="${username}"
                 password="${password}">
+            <property name="nullCatalogMeansCurrent" value="true" />
         </jdbcConnection>
 
         <!-- 非必需，类型处理器，在数据库类型和java类型之间的转换控制-->
@@ -56,14 +57,40 @@
 
 
 
-        <!--生成对应表及类名-->
-        <table tableName="student"
-               domainObjectName="Student"
-               enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" enableDeleteByPrimaryKey="false" enableInsert="false" enableUpdateByPrimaryKey="false">
+        <!-- 生成对应数据库{schema}下的所有表{%} -->
+        <!-- 注意1: 根据官方解释:由于MySql语法不支持标准的catalog..table SQL语法,因此为了
+                    避免schema失效,必须在配置{jdbcConnection}中设置{nullCatalogMeansCurrent=true} -->
+        <!-- 注意2: {enable*}之类的设置,必须至少有1个是true,不然会生成失败 -->
+        <!-- 注意3: domainObjectName不需要设置, 默认是表名首字母大写 -->
+
+        <!--<table schema="dbName" tableName="%"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableCountByExample="false"-->
+               <!--enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false"-->
+               <!--enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false"-->
+               <!--enableDeleteByPrimaryKey="false"-->
+               <!--enableUpdateByPrimaryKey="false"-->
+               <!--enableInsert="false">-->
+            <!--&lt;!&ndash;MyBatis Generator会使用数据库中实际的字段名字作为生成的实体类的属性名, false使用驼峰&ndash;&gt;-->
+            <!--<property name="useActualColumnNames" value="true"></property>-->
+        <!--</table>-->
+
+        <!-- 生成指定表 -->
+        <table tableName="student" domainObjectName="MyStudent"
+               enableSelectByPrimaryKey="true"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false"
+               enableDeleteByPrimaryKey="false"
+               enableUpdateByPrimaryKey="false"
+               enableInsert="false">
             <!--MyBatis Generator会使用数据库中实际的字段名字作为生成的实体类的属性名, false使用驼峰-->
             <property name="useActualColumnNames" value="true"></property>
         </table>
-
 
     </context>
 </generatorConfiguration>
