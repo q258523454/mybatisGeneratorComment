@@ -78,7 +78,50 @@
         <!--</table>-->
 
         <!-- 生成指定表 -->
-        <table tableName="student" domainObjectName="MyStudent"
+        <table tableName="dgpj_rzzl_contract_info" domainObjectName="Dgpj_Rzzl_Contract_Info"
+               enableSelectByPrimaryKey="true"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false"
+               enableDeleteByPrimaryKey="false"
+               enableUpdateByPrimaryKey="false"
+               enableInsert="false">
+            <!--MyBatis Generator会使用数据库中实际的字段名字作为生成的实体类的属性名, false使用驼峰-->
+            <property name="useActualColumnNames" value="true"></property>
+        </table>
+
+        <table tableName="dgpj_rzzl_finance_data" domainObjectName="Dgpj_Rzzl_Finance_Data"
+               enableSelectByPrimaryKey="true"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false"
+               enableDeleteByPrimaryKey="false"
+               enableUpdateByPrimaryKey="false"
+               enableInsert="false">
+            <!--MyBatis Generator会使用数据库中实际的字段名字作为生成的实体类的属性名, false使用驼峰-->
+            <property name="useActualColumnNames" value="true"></property>
+        </table>
+
+
+        <table tableName="dgpj_rzzl_finance_guarantor" domainObjectName="Dgpj_Rzzl_Finance_Guarantor"
+               enableSelectByPrimaryKey="true"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false"
+               enableDeleteByPrimaryKey="false"
+               enableUpdateByPrimaryKey="false"
+               enableInsert="false">
+            <!--MyBatis Generator会使用数据库中实际的字段名字作为生成的实体类的属性名, false使用驼峰-->
+            <property name="useActualColumnNames" value="true"></property>
+        </table>
+
+        <table tableName="dgpj_rzzl_finance_lease" domainObjectName="Dgpj_Rzzl_Finance_Lease"
                enableSelectByPrimaryKey="true"
                enableCountByExample="false"
                enableUpdateByExample="false"

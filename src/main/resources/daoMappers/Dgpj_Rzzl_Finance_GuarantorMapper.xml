@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.Dgpj_Rzzl_Finance_GuarantorMapper">
+  <resultMap id="BaseResultMap" type="com.entity.Dgpj_Rzzl_Finance_Guarantor">
+    <id column="table_id" jdbcType="INTEGER" property="table_id" />
+    <result column="apid" jdbcType="VARCHAR" property="apid" />
+    <result column="guarantorGrade" jdbcType="VARCHAR" property="guarantorGrade" />
+    <result column="guarantorInformation" jdbcType="VARCHAR" property="guarantorInformation" />
+    <result column="assureMeans" jdbcType="VARCHAR" property="assureMeans" />
+    <result column="guarantorindustry" jdbcType="VARCHAR" property="guarantorindustry" />
+    <result column="guarantor" jdbcType="VARCHAR" property="guarantor" />
+    <result column="collateralValue" jdbcType="VARCHAR" property="collateralValue" />
+    <result column="guarantorNumber" jdbcType="VARCHAR" property="guarantorNumber" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    table_id, apid, guarantorGrade, guarantorInformation, assureMeans, guarantorindustry, 
+    guarantor, collateralValue, guarantorNumber
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from dgpj_rzzl_finance_guarantor
+    where table_id = #{table_id,jdbcType=INTEGER}
+  </select>
+</mapper>
