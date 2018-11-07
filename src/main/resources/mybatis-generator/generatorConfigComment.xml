@@ -46,7 +46,7 @@
         </javaModelGenerator>
 
         <!-- Mapper映射路径 -->
-        <sqlMapGenerator targetPackage="daoMappers" targetProject="src/main/resources">
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
@@ -78,7 +78,7 @@
         <!--</table>-->
 
         <!-- 生成指定表 -->
-        <table tableName="student" domainObjectName="MyStudent"
+        <table tableName="user" domainObjectName="User"
                enableSelectByPrimaryKey="true"
                enableCountByExample="false"
                enableUpdateByExample="false"
@@ -89,7 +89,7 @@
                enableUpdateByPrimaryKey="false"
                enableInsert="false">
             <!--MyBatis Generator会使用数据库中实际的字段名字作为生成的实体类的属性名, false使用驼峰-->
-            <property name="useActualColumnNames" value="true"></property>
+            <property name="useActualColumnNames" value="false"></property>
         </table>
 
     </context>

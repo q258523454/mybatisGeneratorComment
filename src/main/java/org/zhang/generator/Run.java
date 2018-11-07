@@ -18,7 +18,7 @@ import java.util.List;
  * 描述：
  * @作者：zhang
  */
-public class MyBatisRun {
+public class Run {
     public static void main(String[] args) throws URISyntaxException {
         try {
             List<String> warnings = new ArrayList<String>();
