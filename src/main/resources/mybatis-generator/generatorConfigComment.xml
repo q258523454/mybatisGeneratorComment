@@ -9,7 +9,7 @@
 
 
     <!--指定特定数据库的jdbc驱动mysql-connector-java-*.jar包的位置 -->
-    <classPathEntry location="${driverLocation}"/>
+    <classPathEntry location="${jdbc.driverLocation}"/>
 
     <context id="default" targetRuntime="MyBatis3">
         <!-- 指定生成的java文件的编码,没有直接生成到项目时中文可能会乱码 -->
@@ -25,10 +25,10 @@
         <!--jdbc的数据库连接 -->
         <!--  注意下面的connectionURL="如果直接写url需要将';'->'&amp;'" -->
         <jdbcConnection
-                driverClass="${driverClassName}"
-                connectionURL="${url}"
-                userId="${username}"
-                password="${password}">
+                driverClass="${jdbc.driverClassName}"
+                connectionURL="${jdbc.url}"
+                userId="${jdbc.username}"
+                password="${jdbc.password}">
             <property name="nullCatalogMeansCurrent" value="true" />
         </jdbcConnection>
 
